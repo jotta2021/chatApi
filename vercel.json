@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/totalOrders.js",
+      "src": "src/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/totalOrders",
-      "dest": "/api/totalOrders.js"
+      "src": "/(.*)",
+      "dest": "src/index.ts"
     }
   ]
 }
